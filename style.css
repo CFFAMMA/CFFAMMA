@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f48d8d;
+    color: #ffffff;
+}
+header {
+    background-color: #f48d8d;
+    color: #f48d8d;
+    padding: 5px -10px;
+    
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 60px; 
+    margin-right: 10px; 
+}
+
+.logo h1 {
+    font-size: 3.5em; 
+    margin: 0;
+    line-height: 1.2;
+}
+
+h1,h2 {
+    color: #c43838;
+    margin: 0;
+}
+nav {
+display: flex;
+align-items: center;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+nav ul li:not(:last-child):after {
+    content: '  ';
+    position: absolute;
+    right: -10px;
+    color: #000000;
+}
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+nav ul li a:hover {
+    color: #c43838;
+}
+.menu-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 15px;
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #f48d8d;
+        width: 200px;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        display: none;
+    }
+    nav ul.open {
+        display: flex;
+    }
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+.showcase {
+    background: #ffffff;
+    min-height: 400px;
+    margin-top: 20px;
+    text-align: center;
+}
+.section {
+    padding: 20px;
+    margin: 10px 0;
+    background: #fdcaca;
+}
+footer {
+    text-align: center;
+    padding: 1px ;
+    background: #f48d8d;
+    color: #000000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
