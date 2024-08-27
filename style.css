@@ -24,4 +24,5 @@ section {
 .navbar-brand img {
     height: 40px; 
     width: auto; 
+    margin-right: 10px;
 }
