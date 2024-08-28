@@ -1,3 +1,7 @@
+body{
+    cursor: url('feuille.png'), auto;
+}
+
 .hero {
     background: url('hero-image.jpg') no-repeat center center;
     background-size: cover;
