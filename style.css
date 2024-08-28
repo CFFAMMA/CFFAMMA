@@ -1,5 +1,5 @@
 body {
-    cursor: url('feuille.png') 32 32 !important, auto;
+    cursor: url('./feuille.png') , auto;
 }
 
 
