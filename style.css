@@ -1,6 +1,7 @@
-body{
-    cursor: url('feuille.png'), auto;
+body {
+    cursor: url('feuille.png') 32 32 !important, auto;
 }
+
 
 .hero {
     background: url('hero-image.jpg') no-repeat center center;
