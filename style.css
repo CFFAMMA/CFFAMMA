@@ -465,21 +465,116 @@ section {
 
 
 /* ======== FOOTER ========== */
- footer{
-    
-    margin-top: 20px;
-    background-color: #1c1c1c;
-    color: white;
-    font-weight: bold;
 
- }
-
- footer p {
+footer {
+    background-color: #2d2d2d;
+    padding: 20px 0;
     text-align: center;
+    position: relative;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 30%;
+    box-sizing: border-box;
+    background-color: transparent; 
+    padding: 10px;
+    border-radius: 5px;
+    color: #919191; 
+    text-align: left; 
+  }
+  
+  .footer-links li {
+    margin: 10px 0;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #919191; 
+    font-size: 16px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-links h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #ffffff; 
+  }
+
+  .social-icon svg {
+    fill: #b7b7b7;
+    transition: fill 0.3s ease;
+  }
+  
+  .social-icon svg:hover {
+    fill: #686868;
+  }
+
+  .footer-links .social-icons {
+    
+    gap: 10px; 
+  }
+  
+  .social-icon {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  .social-icon a {
+    
     align-items: center;
-    /* margin-top: 5px ; */
-    margin-bottom: -5px;
- }
+    justify-content: center;
+  }
+  
+  .footer-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    color: #ffffff; 
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border-top: 1px solid #585858;
+  }
+
+  .footer-bottom p {
+    margin: 0; 
+  }
+  
+  @media (max-width: 768px) {
+    .footer-links {
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+    
+      
+      .social-icons {
+        justify-content: center; 
+      }
+  }
+  
 
  /* ================= BOUTON ================== */
 
