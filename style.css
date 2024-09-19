@@ -540,6 +540,14 @@ footer {
     width: 24px;
     height: 24px;
   }
+
+  .footer-links .social-icons p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0; /* Espacement entre l'icône et la description */
+    text-align: center; /* Centrer le texte de la description */
+  }
+  
   .social-icon a {
     
     align-items: center;
