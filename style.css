@@ -520,6 +520,9 @@ footer {
   .social-icon svg {
     fill: #b7b7b7;
     transition: fill 0.3s ease;
+    width: 24px;
+    height: 24px;
+  
   }
   
   .social-icon svg:hover {
@@ -527,32 +530,23 @@ footer {
   }
 
   .footer-links .social-icons {
-    
-    gap: 10px; 
-  }
-  
-  .social-icon {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .social-icon svg {
-    width: 24px;
-    height: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+  .footer-links .social-icons a span {
+    margin-left: 20px; 
+    font-size: 14px;
+    color: #acabab;
   }
 
-  .footer-links .social-icons p {
-    font-size: 14px;
-    color: #666;
-    margin: 5px 0 0; /* Espacement entre l'icône et la description */
-    text-align: center; /* Centrer le texte de la description */
-  }
-  
-  .social-icon a {
-    
+  .footer-links .social-icons a {
+    display: flex; 
     align-items: center;
-    justify-content: center;
-  }
+    text-decoration: none;
+    margin-bottom: 20px;
+}
   
   .footer-bottom {
     position: absolute;
@@ -584,7 +578,7 @@ footer {
   }
   
 
- /* ================= BOUTON ================== */
+/* ================= BOUTON ================== */
 
 
 /* =================  ================== */
