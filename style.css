@@ -199,7 +199,7 @@ section {
     }
 }
 
-/* 
+
 .hero::after {
     content: "";
     position: absolute;
@@ -211,7 +211,7 @@ section {
     background-position: center ; 
     background-repeat: no-repeat;
     animation: moveUp 1.5s ease-in-out forwards; 
-    background-image: url('devant.png'); 
+    background-image: url('./nouveau2.png'); 
     z-index: 2;
 }
 .hero::before {
@@ -219,9 +219,9 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('arriere.png');
+    width: 500%;
+    height: 500%;
+    background-image: url('./nouveau1.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -236,7 +236,8 @@ section {
     100% {
         transform: translateY(0); 
     }
-}  */
+}  
+
 
 .hero h1 {
     font-size: 4rem;
