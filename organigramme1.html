@@ -1,0 +1,62 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {packages:["orgchart"]});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            // Définir les données de l'organigramme
+            data.addRows([
+                [{'v':'CONSEIL D\'ADMINISTRATION', 'f':'CONSEIL D\'ADMINISTRATION<div style="color:red; font-style:italic"></div>'}, '', 'Conseil d\'Administration'],
+                [{'v':'DIRECTEUR GENERAL', 'f':'DIRECTEUR GENERAL<div style="color:red; font-style:italic"></div>'}, 'CONSEIL D\'ADMINISTRATION', 'Directeur Général'],
+                [{'v':'CELLULE DE CONCEPTION ET SE', 'f':'CELLULE DE CONCEPTION ET SE<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR GENERAL', 'Cellule de Conception et SE'],
+                [{'v':'AGENT COMPTABLE', 'f':'AGENT COMPTABLE<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR GENERAL', 'Agent Comptable'],
+                [{'v':'CHEF DE DIVISION COMPTABILITE GENERALE', 'f':'CHEF DE DIVISION COMPTABILITE GENERALE<div style="color:red; font-style:italic"></div>'}, 'AGENT COMPTABLE', 'Chef de Division Comptabilité Générale'],
+                [{'v':'CHEF DE DIVISION COMPTABILITE MATIERE', 'f':'CHEF DE DIVISION COMPTABILITE MATIERE<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION COMPTABILITE GENERALE', 'Chef de Division Comptabilité Matière'],
+                [{'v':'DIRECTEUR ADMINISTRATIF ET FINANCIER', 'f':'DIRECTEUR ADMINISTRATIF ET FINANCIER<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR GENERAL', 'Directeur Administratif et Financier'],
+                [{'v':'CHEF DE SERVICE ADMINISTRATIF ET PERSONNEL ET CONTENTIEUX', 'f':'CHEF DE SERVICE ADMINISTRATIF ET PERSONNEL ET CONTENTIEUX<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR ADMINISTRATIF ET FINANCIER', 'Chef de Service Administratif et Personnel et Contentieux'],
+                [{'v':'CHEF DE DIVISION PERSONNEL', 'f':'CHEF DE DIVISION PERSONNEL<div style="color:red; font-style:italic"></div>'}, 'CHEF DE SERVICE ADMINISTRATIF ET PERSONNEL ET CONTENTIEUX', 'Chef de Division Personnel'],
+                [{'v':'CHEF DE DIVISION ADMINISTRATIVE', 'f':'CHEF DE DIVISION ADMINISTRATIVE<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION PERSONNEL', 'Chef de Division Administrative'],
+                [{'v':'CHEF DE SERVICE FINANCIER', 'f':'CHEF DE SERVICE FINANCIER<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR ADMINISTRATIF ET FINANCIER', 'Chef de Service Financier'],
+                [{'v':'CHEF DE DIVISION FINANCIER', 'f':'CHEF DE DIVISION FINANCIER<div style="color:red; font-style:italic"></div>'}, 'CHEF DE SERVICE FINANCIER', 'Chef de Division Financier'],
+                [{'v':'CHEF DE DIVISION PROGRAMMATION BUDGETAIRE', 'f':'CHEF DE DIVISION PROGRAMMATION BUDGETAIRE<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION FINANCIER', 'Chef de Division Programmation Budgétaire'],
+                [{'v':'DIRECTEUR DE FORMATION', 'f':'DIRECTEUR DE FORMATION<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR GENERAL', 'Directeur de Formation'],
+                [{'v':'CHEF DE SERVICE INGENIERIE DE FORMATION EN MACHINISME AGRICOLE', 'f':'CHEF DE SERVICE INGENIERIE DE FORMATION EN MACHINISME AGRICOLE<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR DE FORMATION', 'Chef de Service Ingénierie de Formation en Machinisme Agricole'],
+                [{'v':'CHEF DE DIVISION FORMATION CONTINUE', 'f':'CHEF DE DIVISION FORMATION CONTINUE<div style="color:red; font-style:italic"></div>'}, 'CHEF DE SERVICE INGENIERIE DE FORMATION EN MACHINISME AGRICOLE', 'Chef de Division Formation Continue'],
+                [{'v':'CHEF DE DIVISION FORMATION INITIALE', 'f':'CHEF DE DIVISION FORMATION INITIALE<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION FORMATION CONTINUE', 'Chef de Division Formation Initiale'],
+                [{'v':'CHEF DE DIVISION DOCUMENTATION ET INFORMATION ET INFORMATIQUE', 'f':'CHEF DE DIVISION DOCUMENTATION ET INFORMATION ET INFORMATIQUE<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION FORMATION INITIALE', 'Chef de Division Documentation et Information'],
+                [{'v':'CHEF DE SERVICE INGENIERIE DE FORMATION EN GENIE RURAL', 'f':'CHEF DE SERVICE INGENIERIE DE FORMATION EN GENIE RURAL<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR DE FORMATION', 'Chef de Service Ingénierie de Formation en Génie Rural'],
+                [{'v':'CHEF DE DIVISION FORMATION', 'f':'CHEF DE DIVISION FORMATION<div style="color:red; font-style:italic"></div>'}, 'CHEF DE SERVICE INGENIERIE DE FORMATION EN GENIE RURAL', 'Chef de Division Formation'],
+                [{'v':'CHEF DE DIVISION ETUDES ET REALISATION', 'f':'CHEF DE DIVISION ETUDES ET REALISATION<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION FORMATION', 'Chef de Division Études et Réalisation'],
+                [{'v':'CHEF DE DIVISION RESTAURATION', 'f':'CHEF DE DIVISION RESTAURATION<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION ETUDES ET REALISATION', 'Chef de Division Restauration'],
+                [{'v':'CHEF DE SERVICE APPLICATION', 'f':'CHEF DE SERVICE APPLICATION<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR DE FORMATION', 'Chef de Service Application'],
+                [{'v':'CHEF DE DIVISION CHAMPS ECOLE IVORY INDIFY', 'f':'CHEF DE DIVISION CHAMPS ECOLE IVORY INDIFY<div style="color:red; font-style:italic"></div>'}, 'CHEF DE SERVICE APPLICATION', 'Chef de Division Champs École Ivory Indify'],
+                [{'v':'CHEF DE DIVISION CHAMPS ECOLE ANOSIBORIBORY', 'f':'CHEF DE DIVISION CHAMPS ECOLE ANOSIBORIBORY<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION CHAMPS ECOLE IVORY INDIFY', 'Chef de Division Champs École Anosiboribory'],
+                [{'v':'DIRECTEUR TECHNIQUE ET COMMERCIAL', 'f':'DIRECTEUR TECHNIQUE ET COMMERCIAL<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR GENERAL', 'Directeur Technique et Commercial'],
+                [{'v':'CHEF DE SERVICE PROMOTION ET VEILLE TECHNOLOGIQUE', 'f':'CHEF DE SERVICE PROMOTION ET VEILLE TECHNOLOGIQUE<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR TECHNIQUE ET COMMERCIAL', 'Chef de Service Promotion et Veille Technologique'],
+                [{'v':'CHEF DE DIVISION FABRICATION PMA', 'f':'CHEF DE DIVISION FABRICATION PMA<div style="color:red; font-style:italic"></div>'}, 'CHEF DE SERVICE PROMOTION ET VEILLE TECHNOLOGIQUE', 'Chef de Division Fabrication PMA'],
+                [{'v':'CHEF DE DIVISION CONCEPTION', 'f':'CHEF DE DIVISION CONCEPTION<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION FABRICATION PMA', 'Chef de Division Conception'],
+                [{'v':'CHEF DE SERVICE MATERIELS ET INFRASTRUCTURES', 'f':'CHEF DE SERVICE MATERIELS ET INFRASTRUCTURES<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR TECHNIQUE ET COMMERCIAL', 'Chef de Service Matériels et Infrastructures'],
+                [{'v':'CHEF DE DIVISION PAR MATERIAUX', 'f':'CHEF DE DIVISION PAR MATERIAUX<div style="color:red; font-style:italic"></div>'}, 'CHEF DE SERVICE MATERIELS ET INFRASTRUCTURES', 'Chef de Division Par Matériaux'],
+                [{'v':'CHEF DE DIVISION INFRASTRUCTURE', 'f':'CHEF DE DIVISION INFRASTRUCTURE<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION PAR MATERIAUX', 'Chef de Division Infrastructure'],
+                [{'v':'CHEF DE DIVISION TEST ET CERTIFICATION TECHNIQUE', 'f':'CHEF DE DIVISION TEST ET CERTIFICATION TECHNIQUE<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION INFRASTRUCTURE', 'Chef de Division Test et Certification Technique'],
+                [{'v':'CHEF DE SERVICE MARKETING ET COMMERCE', 'f':'CHEF DE SERVICE MARKETING ET COMMERCE<div style="color:red; font-style:italic"></div>'}, 'DIRECTEUR TECHNIQUE ET COMMERCIAL', 'Chef de Service Marketing et Commerce'],
+                [{'v':'CHEF DE DIVISION MARKETING', 'f':'CHEF DE DIVISION MARKETING<div style="color:red; font-style:italic"></div>'}, 'CHEF DE SERVICE MARKETING ET COMMERCE', 'Chef de Division Marketing'],
+                [{'v':'CHEF DE DIVISION VENTE', 'f':'CHEF DE DIVISION VENTE<div style="color:red; font-style:italic"></div>'}, 'CHEF DE DIVISION MARKETING', 'Chef de Division Vente']
+            ]);
+
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+            chart.draw(data, {allowHtml:true});
+        }
+    </script>
+</head>
+<body>
+    <div id="chart_div"></div>
+</body>
+</html>
